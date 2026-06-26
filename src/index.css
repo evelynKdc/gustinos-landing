@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+
+  body {
+    @apply bg-cream text-carbon font-body antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  .will-animate          { opacity: 0; }
+  .animate-delay-100     { animation-delay: 100ms; }
+  .animate-delay-200     { animation-delay: 200ms; }
+  .animate-delay-300     { animation-delay: 300ms; }
+  .animate-delay-400     { animation-delay: 400ms; }
+  .animate-delay-500     { animation-delay: 500ms; }
+}
